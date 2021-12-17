@@ -3,6 +3,10 @@
   "version": "1.0.0",
   "description": "BOT discord d'ImoKa",
   "main": "index.js",
+  "engines": {
+    "node": "17.x",
+    "npm": "7.x"
+  },
   "scripts": {
     "start": "node index.js"
   },
