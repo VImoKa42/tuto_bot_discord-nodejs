@@ -8,7 +8,7 @@ let client = new Discord.Client({
 });
 
 //Infos
-let { token, prefix, log } = require("./parametres.json");
+let { prefix, log } = require("./parametres.json");
 
 //Ajout commandes
 client.commands = new Discord.Collection();
@@ -25,4 +25,4 @@ client.once("ready", () => require("./evenements/ready.js")(client));
 
 client.on("messageCreate", (message) => require("./evenements/messageCreate.js")(message, prefix, Discord, client, log));
 
-client.login(token);
+client.login(process.env.TOKEN);
